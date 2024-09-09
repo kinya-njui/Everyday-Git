@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everyday Git</title>
+</head>
+<body>
+    <h1>Everyday Git</h1>
+    <h2>1. Get Started</h2>
+    <p>First, set up your development environment. For this tutorial, you’ll need to install <strong>Visual Studio Code</strong> and create a folder named <code>everyday-git</code> where you will place all your files.</p>
+    <h2>2. GIT</h2>
+    <p>What is Git?</p>
+    <p>
+        Git is a Version Control System (VCS). A version control system is software that tracks and manages changes to files over time. It allows developers and teams to keep a history of their project, enabling them to revisit earlier versions of their files, compare changes between versions, undo unwanted changes, and more.
+
+    </p>
+    <p>In this blog, we will focus on Git and how to use it with GitHub, a popular platform for hosting Git repositories.</p>
+    <h2>What Git does for us</h2>
+    <ul>
+        <li>Track changes across files.</li>
+        <li>Compare versions of a project.</li>
+        <li>Time travel back to older versions.</li>
+        <li>Revert to a previous version.</li>
+        <li>Collaborate and share changes.</li>
+        <li>Combine changes.</li>
+    </ul>
+    <h2>Brief History about Git</h2>
+        <p>
+            In 2005, while developing Linux, Linus Torvalds grew frustrated with the available version control systems (VCSs), as they were slow, proprietary, and often required payment. Torvalds sought a VCS that was fast and free, unlike the tools that were available at the time. On April 3rd, 2005, he began creating his own VCS, which would later become Git. Within just a few days, he had built the basic functionality. Today, Git is open source, supported and developed by a global community of programmers.</p>
+    <p>
+        Version control systems play a crucial role in software development, especially when multiple developers are working on the same project. They ensure that all changes are tracked and that everyone is working with the most up-to-date version of the code.
+    </p>
+    <p>There are several other version control systems like Git, such as:</p>
+    <ul>
+        <li>Subversion (SVN)</li>
+        <li>CVS (Concurrent Versions System)</li>
+        <li>Mercurial</li>
+    </ul>
+    <h2>3. Installing Git</h2>
+    <p>To check if Git is installed on your machine, open a terminal and run the following command:</p>
+    <pre><code>git --version</code></pre>
+    <img src="Images/Installing GIt.jpg" alt="Git version command output">
+    <p>If Git is not installed, follow the instructions for your OS below:</p>
+    <ul>
+        <li><strong>Windows</strong>: Download from the official <a href="https://git-scm.com/downloads">Git website</a>.</li>
+        <li><strong>macOS</strong>: Run <code>git --version</code> in the terminal to install Git if it’s not already installed.</li>
+        <li><strong>Linux</strong>: Run <code>sudo apt install git</code> for Ubuntu-based systems.</li>
+    </ul>
+    <h2>Confirm whether you have Git installed</h2>
+    <ul>
+        <li>Open command prompt in windows or terminal in mac/linux.</li>
+        <li>Run the command:</li>
+        <pre><code>git --version</code></pre>
+        <li>If a version number is returned, Git is installed on your system. If you receive any other output, Git is not installed.</li>
+        <img src="Images/Git version.jpg" alt="Git version command output">
+
+    </ul>
+   <section>
+    <h2>4. Configuring Git</h2>
+    <p>Now that Git is installed, it's time to configure basic information.
+        We don't need to 'register an account' to use Git, however, we need to tell Git who we are.
+        We do this by providing our username and email address.</p>
+        <H3>Configuring your username</H3>
+        <p>Configure your username using the following commands:</p>
+    <pre><code>git config --global user.name "USERNAME"</code></pre>
+    <P>Replace USERNAME with your preferred username, for example, if your username is kinya-njui:</P>
+    <pre><code>git config --global user.name "kinya-njui"</code></pre>
+    <img src="Images/Username config.jpg" alt="Configuring your Username">
+    <H3>Configuring your email address</H3>
+    <p>Configure your email address using the following commands:</p>
+    <pre><code>git config --global user.email "EMAIL_ADDRESS"</code></pre>
+    <P>Replace EMAIL_ADDRESS with your preferred username, for example, if your username is kinyanjuicharlesm@gmail.com:</P>
+    <pre><code>git config --global user.email "kinyanjuicharlesm@gmail.com"</code></pre>
+    <img src="" alt="">
+    <img src="Images/Emailaddress config.jpg" alt="Configuring your email_address">
+</section>
+<section>
+    <h2>5. Initializing a Git Repository</h2>
+    <p>A Git repository is where Git stores all your file changes. To initialize a Git repository, run the following command in your project folder:</p>
+    <pre><code>git init</code></pre>
+    <img src="Images/Github Resipitory.jpg" alt="Git init command output">
+</section>
+<section>
+    <h2>6. Adding Files to the Staging Area</h2>
+    <p>The staging area in Git is where changes are prepared before they are committed. To add files to the staging area, use:</p>
+    <pre><code>git add .</code></pre>
+    <img src="Images/Git add.jpg" alt="Git add command">
+    <p>Tracked files are being monitored by Git, while untracked files are new files Git hasn't started tracking yet.</p>
+</section>
+
+<section>
+    <h2>7. Committing Changes</h2>
+    <p>To commit your changes, use the following command:</p>
+    <pre><code>git commit -m "Your commit message"</code></pre>
+    <img src="Images/Git commit.jpg" alt="Git commit command">
+    <p>Commit messages should be clear and concise. To view past commits, use <code>git log</code>, and to revert to a previous commit, use <code>git checkout [commit-hash]</code>.</p>
+</section>
+
+<section>
+    <h2>8. Branches in Git</h2>
+    <p>Branches in Git allow you to work on different parts of your project without affecting the main codebase. They are essential for collaboration and feature development.</p>
+</section>
+
+<section>
+    <h2>9. Creating a Branch</h2>
+    <p>To create a new branch, use the following command:</p>
+    <pre><code>git branch new-branch</code></pre>
+    <img src="Images/Creating a branch.jpg" alt="Git branch creation">
+</section>
+
+<section>
+    <h2>10. Viewing All Branches</h2>
+    <p>To view all branches in your repository, use:</p>
+    <pre><code>git branch</code></pre>
+    <img src="Images/Git branch.jpg" alt="List of branches">
+    <p>The current active branch is marked with an asterisk (*).</p>
+</section>
+
+<section>
+    <h2>11. Switching Active Branches</h2>
+    <p>To switch between branches, use:</p>
+    <pre><code>git checkout new-branch</code></pre>
+    <img src="Images/Git switching.jpg" alt="Git checkout command">
+</section>
+
+<section>
+    <h2>12. Merging a Branch</h2>
+    <p>To merge a branch into your current branch, use:</p>
+    <pre><code>git merge new-branch</code></pre>
+    <img src="Images/Git merging.jpg" alt="Git merge command">
+</section>
+
+<section>
+    <h2>13. Deleting a Branch</h2>
+    <p>Once you’ve merged a branch and no longer need it, delete it using:</p>
+    <pre><code>git branch -d new-branch</code></pre>
+    <img src="Images/Git delete.jpg" alt="Git delete branch command">
+</section>
+
+<section>
+    <h2>14. Next Steps</h2>
+    <p>Next, you can explore using GitHub to host your Git repositories, collaborate with others, and practice advanced Git workflows.</p>
+</section>
+
+<section>
+    <h2>15. Deploying the Blog</h2>
+    <p>You can now deploy your blog to a hosting platform like Vercel or GitHub Pages. Follow the instructions from the respective platform to host your <code>index.html</code> file and make it accessible online.</p>
+</section>
+
+<section>
+    <h2>16. Congratulations! You are Done!</h2>
+    <p>You’ve successfully completed the Everyday Git tutorial. Keep practicing and explore more advanced Git features!</p>
+</section>
+</body>
+</html>
